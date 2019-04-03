@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог товаров интернет-магазина милых вещей для дома «Мишка»</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип магазина «Мишка»">
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+        <div class="main-nav__search">
+
+        </div>
+        <div class="main-nav__cart">
+
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <header class="main-header">
+        <h1 class="main-header__title">Каталог товаров</h1>
+      </header>
+      <section class="catalog">
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <a href="#">
+              <figure class="catalog__item-image">
+                <img src="http://placehold.it/260x195" width="260" height="195" alt="Вязаная игрушка голубого цвета">
+                <figcaption class="catalog__item-title">
+                  Зайчик-попрыгайчик
+                </figcaption>
+              </figure>
+            </a>
+            <p class="catalog__item-spec">
+              Рост 30 см, вес 200 г
+            </p>
+            <p class="catalog__item-price">1 200 руб.</p>
+            <a class="button" href="#">Добавить в корзину</a>
+          </li>
+          <li class="catalog__item">
+            <a href="#">
+              <figure class="catalog__item-image">
+                <img src="http://placehold.it/260x195" width="260" height="195" alt="Бело-розовая вязаная корзинка с тремя свёрнутыми полотенцами в ней">
+                <figcaption class="catalog__item-title">
+                  Корзинка для белья
+                </figcaption>
+              </figure>
+            </a>
+            <p class="catalog__item-spec">
+              Диаметр 15 см, высота 10 см
+            </p>
+            <p class="catalog__item-price">690 руб.</p>
+            <a class="button" href="#">Добавить в корзину</a>
+          </li>
+          <li class="catalog__item">
+            <a href="#">
+              <figure class="catalog__item-image">
+                <img src="http://placehold.it/260x195" width="260" height="195" alt="Бело-зелёная вязанная корзинка с плюшевыми игрушками внутри неё">
+                <figcaption class="catalog__item-title">
+                  Большая корзинка для игрушек
+                </figcaption>
+              </figure>
+            </a>
+            <p class="catalog__item-spec">
+              Диаметр 30 см, высота 30 см
+            </p>
+            <p class="catalog__item-price">1 500 руб.</p>
+            <a class="button" href="#">Добавить в корзину</a>
+          </li>
+        </ul>
+      </section>
+      <section class="promo">
+        <h2 class="promo__title">Процесс производства</h2>
+        <video class="promo__video">
+
+        </video>
+        <p class="promo__text">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+        <a class="button" href="#">Сделать заказ</a>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--instagram" href="#">Мы в Инстаграме</a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--fb" href="#">Мы в Фейсбуке</a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--twitter" href="#">Мы в Твиттере</a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__image" src="http://placehold.it/27x34" alt="Логотип HTML Academy">
+        </a>
+      </div>
+    </footer>
+    <section class="fill-cart modal">
+      <h3 class="fill-cart__title">Добавить в корзину</h3>
+      <form class="fill-cart__form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="fill-cart__option">
+          <input type="radio" name="item-size" value="small" checked>
+          S
+        </label>
+        <label class="fill-cart__option">
+          <input type="radio" name="item-size" value="medium">
+          M
+        </label>
+        <label class="fill-cart__option">
+          <input type="radio" name="item-size" value="large">
+          L
+        </label>
+        <button class="button" type="submit">Добавить</button>
+      </form>
+    </section>
+  </body>
+</html>
