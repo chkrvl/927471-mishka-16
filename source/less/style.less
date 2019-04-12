@@ -10,3 +10,53 @@
 @import "page-footer";
 @import "social-list";
 @import "fill-cart";
+
+@tablet-width: 768px;
+@desktop-width: 1200px;
+
+@font-face {
+  font-weight: normal;
+  font-family: "OpenSans";
+  font-style: normal;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url("../fonts/opensans.woff") format("woff"), url("source/fonts/opensans.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "OpenSans";
+  font-style: normal;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url("../fonts/opensansbold.woff") format("woff"), url("source/fonts/opensansbold.woff2") format("woff2");
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-family: "OpenSans", sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: left;
+  color: #444;
+  font-style: normal;
+}
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  height: 52px;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #444;
+
+  border: solid 2px #444444;
+}
