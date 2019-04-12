@@ -3,39 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог товаров интернет-магазина милых вещей для дома «Мишка»</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="format-detection" content="telephone=no">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип магазина «Мишка»">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
       </a>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="#">Каталог товаров</a>
+            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item main-nav__item--desktop-only">
+            <a class="main-nav__link" href="#">Новые поступления</a>
+          </li>
+          <li class="main-nav__item main-nav__item--desktop-only">
+            <a class="main-nav__link" href="#">Распродажа</a>
           </li>
         </ul>
-        <div class="main-nav__search">
-
-        </div>
-        <div class="main-nav__cart">
-
-        </div>
       </nav>
+      <div class="main-nav__search">
+        <a class="main-nav__link" href="#">Поиск по сайту</a>
+      </div>
+      <div class="main-nav__cart">
+        <a class="main-nav__link" href="#">Корзина: пока пуста</a>
+      </div>
+      <span class="page-header__delivery">Бесплатная доставка по России</span>
     </header>
     <main class="page-main">
-      <header class="main-header">
+      <header class="main-header main-header--catalog">
         <h1 class="main-header__title">Каталог товаров</h1>
       </header>
       <section class="catalog">
         <ul class="catalog__list">
           <li class="catalog__item">
-            <a href="#">
+            <a class="catalog__item-link" href="#">
               <figure class="catalog__item-image">
-                <img src="http://placehold.it/260x195" width="260" height="195" alt="Вязаная игрушка голубого цвета">
+                <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Вязаная игрушка голубого цвета">
                 <figcaption class="catalog__item-title">
                   Зайчик-попрыгайчик
                 </figcaption>
@@ -45,12 +55,12 @@
               Рост 30 см, вес 200 г
             </p>
             <p class="catalog__item-price">1 200 руб.</p>
-            <a class="button" href="#">Добавить в корзину</a>
+            <a class="catalog__item-add button" href="#">Добавить в корзину</a>
           </li>
           <li class="catalog__item">
-            <a href="#">
+            <a class="catalog__item-link" href="#">
               <figure class="catalog__item-image">
-                <img src="http://placehold.it/260x195" width="260" height="195" alt="Бело-розовая вязаная корзинка с тремя свёрнутыми полотенцами в ней">
+                <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Бело-розовая вязаная корзинка с тремя свёрнутыми полотенцами в ней">
                 <figcaption class="catalog__item-title">
                   Корзинка для белья
                 </figcaption>
@@ -60,12 +70,12 @@
               Диаметр 15 см, высота 10 см
             </p>
             <p class="catalog__item-price">690 руб.</p>
-            <a class="button" href="#">Добавить в корзину</a>
+            <a class="catalog__item-add button" href="#">Добавить в корзину</a>
           </li>
           <li class="catalog__item">
-            <a href="#">
+            <a class="catalog__item-link" href="#">
               <figure class="catalog__item-image">
-                <img src="http://placehold.it/260x195" width="260" height="195" alt="Бело-зелёная вязанная корзинка с плюшевыми игрушками внутри неё">
+                <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Бело-зелёная вязанная корзинка с плюшевыми игрушками внутри неё">
                 <figcaption class="catalog__item-title">
                   Большая корзинка для игрушек
                 </figcaption>
@@ -75,7 +85,7 @@
               Диаметр 30 см, высота 30 см
             </p>
             <p class="catalog__item-price">1 500 руб.</p>
-            <a class="button" href="#">Добавить в корзину</a>
+            <a class="catalog__item-add button" href="#">Добавить в корзину</a>
           </li>
         </ul>
       </section>
@@ -87,7 +97,7 @@
         <p class="promo__text">
           По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
         </p>
-        <a class="button" href="#">Сделать заказ</a>
+        <a class="promo__button button" href="#">Сделать заказ</a>
       </section>
     </main>
 
@@ -106,7 +116,7 @@
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__image" src="http://placehold.it/27x34" alt="Логотип HTML Academy">
+          <img class="copyright__image" src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy">
         </a>
       </div>
     </footer>
