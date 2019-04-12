@@ -2,9 +2,13 @@
   border-top: 1px solid #ececec;
 
   background-color: #f9f9f9;
-  background-image: url(../img/hero-mobile%401x.jpg);
+  background-image: url(../img/hero-mobile@1x.jpg);
   background-position: center top;
   background-repeat: no-repeat;
+
+  &--catalog {
+    background-image: none;
+  }
 }
 
 .main-header__title {
@@ -12,11 +16,15 @@
 
   margin: 0 auto;
   padding-top: 76px;
-  padding-bottom: 120px;
+  padding-bottom: 75px;
 
   font-size: 27px;
   font-weight: bold;
   line-height: 30px;
   text-align: center;
   color: #010000;
+
+  &--index {
+    padding-bottom: 120px;
+  }
 }
