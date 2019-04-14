@@ -100,3 +100,47 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .main-nav {
+    order: 0;
+
+    width: 380px;
+  }
+
+  .main-nav__list {
+    position: relative;
+
+    flex-wrap: wrap;
+
+    margin: 0;
+  }
+
+  .main-nav__item {
+    // margin-right: 70px;
+    // margin-bottom: 100px;
+
+    font-size: 17px;
+
+    &--desktop-only {
+      display: block;
+
+      // margin: 0;
+      position: absolute;
+      bottom: -70px;
+
+      font-size: 15px;
+
+      &:last-child {
+        right: 60px;
+      }
+    }
+  }
+
+  .main-nav__search {
+    order: 2;
+  }
+
+  .main-nav__cart {
+    order: 3;
+  }
+}

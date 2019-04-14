@@ -62,3 +62,29 @@
     }
   }
 }
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    background-image: url("../img/hero-desktop@1x.jpg");
+
+    &--catalog {
+      background-image: none;
+    }
+
+    &--form {
+      background-image: none;
+    }
+  }
+
+  .main-header__title {
+    font-size: 53px;
+    line-height: 57px;
+
+    &--index {
+      width: 615px;
+
+      padding-top: 161px;
+      padding-bottom: 354px;
+    }
+  }
+}
