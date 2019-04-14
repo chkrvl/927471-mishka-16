@@ -11,6 +11,7 @@
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
+  color: #000000;
 }
 
 .features__list {
@@ -29,4 +30,63 @@
   line-height: 20px;
   font-weight: bold;
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    // width: 668px;
+    .tablet-centre;
+  }
+
+  .features__title {
+    padding-top: 60px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .features__list {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .features__item {
+    // display: inline-block;
+    width: 295px;
+
+    padding: 0;
+    padding-top: 75px;
+    padding-bottom: 30px;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 22px;
+
+    &--eco {
+      order: 0;
+    }
+
+    &--craft {
+      order: 1;
+    }
+
+    &--hugge {
+      order: 2;
+    }
+
+    &--local {
+      order: 3;
+    }
+
+    &--likes {
+      order: 4;
+    }
+
+    &--gift {
+      order: 5;
+    }
+  }
+
 }

@@ -44,48 +44,54 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <a class="catalog__item-link" href="#">
-              <figure class="catalog__item-image">
-                <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Вязаная игрушка голубого цвета">
-                <figcaption class="catalog__item-title">
-                  Зайчик-попрыгайчик
-                </figcaption>
-              </figure>
+              <picture class="catalog__item-head">
+                <img class="catalog__item-image" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Вязаная игрушка голубого цвета">
+              </picture>
             </a>
-            <p class="catalog__item-spec">
-              Рост 30 см, вес 200 г
-            </p>
-            <p class="catalog__item-price">1 200 руб.</p>
-            <a class="catalog__item-add button" href="#">Добавить в корзину</a>
+            <div class="catalog__item-desription">
+              <a class="catalog__item-link" href="#">
+                <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
+              </a>
+              <p class="catalog__item-spec">
+                Рост 30 см, вес 200 г
+              </p>
+              <p class="catalog__item-price">1 200 руб.</p>
+              <a class="catalog__item-add button" href="#">Добавить в корзину</a>
+            </div>
           </li>
           <li class="catalog__item">
             <a class="catalog__item-link" href="#">
-              <figure class="catalog__item-image">
-                <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Бело-розовая вязаная корзинка с тремя свёрнутыми полотенцами в ней">
-                <figcaption class="catalog__item-title">
-                  Корзинка для белья
-                </figcaption>
-              </figure>
+              <picture class="catalog__item-head">
+                <img class="catalog__item-image" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Бело-розовая вязаная корзинка с тремя свёрнутыми полотенцами в ней">
+              </picture>
             </a>
-            <p class="catalog__item-spec">
-              Диаметр 15 см, высота 10 см
-            </p>
-            <p class="catalog__item-price">690 руб.</p>
-            <a class="catalog__item-add button" href="#">Добавить в корзину</a>
+            <div class="catalog__item-desription">
+              <a class="catalog__item-link" href="#">
+                <h3 class="catalog__item-title">Корзинка для белья</h3>
+              </a>
+              <p class="catalog__item-spec">
+                Диаметр 15 см, высота 10 см
+              </p>
+              <p class="catalog__item-price">690 руб.</p>
+              <a class="catalog__item-add button" href="#">Добавить в корзину</a>
+            </div>
           </li>
           <li class="catalog__item">
             <a class="catalog__item-link" href="#">
-              <figure class="catalog__item-image">
-                <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Бело-зелёная вязанная корзинка с плюшевыми игрушками внутри неё">
-                <figcaption class="catalog__item-title">
-                  Большая корзинка для игрушек
-                </figcaption>
-              </figure>
+              <picture class="catalog__item-head">
+                <img class="catalog__item-image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Бело-зелёная вязанная корзинка с плюшевыми игрушками внутри неё">
+              </picture>
             </a>
-            <p class="catalog__item-spec">
-              Диаметр 30 см, высота 30 см
-            </p>
-            <p class="catalog__item-price">1 500 руб.</p>
-            <a class="catalog__item-add button" href="#">Добавить в корзину</a>
+            <div class="catalog__item-desription">
+              <a class="catalog__item-link" href="#">
+                <h3 class="catalog__item-title">Большая корзинка<br>для игрушек</h3>
+              </a>
+              <p class="catalog__item-spec">
+                Диаметр 30 см, высота 30 см
+              </p>
+              <p class="catalog__item-price">1 500 руб.</p>
+              <a class="catalog__item-add button" href="#">Добавить в корзину</a>
+            </div>
           </li>
         </ul>
       </section>
@@ -100,24 +106,26 @@
         <a class="promo__button button" href="#">Сделать заказ</a>
       </section>
     </main>
-
     <footer class="page-footer">
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--instagram" href="#">Мы в Инстаграме</a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--fb" href="#">Мы в Фейсбуке</a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--twitter" href="#">Мы в Твиттере</a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__image" src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy">
-        </a>
+      <div class="page-footer__wrapper">
+        <img class="page-footer__logo" src="img/logo-footer.svg" width="102" height="34" alt="Логотип магазина «Мишка»">
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--instagram" href="#">Мы в Инстаграме</a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--fb" href="#">Мы в Фейсбуке</a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--twitter" href="#">Мы в Твиттере</a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="copyright__image" src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy">
+          </a>
+        </div>
       </div>
     </footer>
     <section class="fill-cart modal">

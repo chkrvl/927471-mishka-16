@@ -32,3 +32,49 @@
   margin-top: 29px;
   margin-bottom: 33px;
 }
+
+@media (min-width: @tablet-width) {
+  .promo {
+    .tablet-centre;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 63px;
+  }
+
+  .promo__title {
+    order: 2;
+
+    margin: 0;
+    padding: 0;
+    margin-top: 43px;
+    margin-left: 107px;
+
+    font-size: 20px;
+  }
+
+  .promo__video {
+    order: 1;
+  }
+
+  .promo__text {
+    order: 3;
+
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    padding-left: 40px;
+    padding-right: 47px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .promo__button {
+    order: 4;
+
+    margin: 42px;
+    margin-bottom: 46px;
+  }
+}
