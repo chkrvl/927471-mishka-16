@@ -131,19 +131,20 @@
     <section class="fill-cart modal">
       <h3 class="fill-cart__title">Добавить в корзину</h3>
       <form class="fill-cart__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="fill-cart__call">Выберите размер:</p>
         <label class="fill-cart__option">
-          <input type="radio" name="item-size" value="small" checked>
+          <input class="visually-hidden" type="radio" name="item-size" value="small" checked>
           S
         </label>
         <label class="fill-cart__option">
-          <input type="radio" name="item-size" value="medium">
+          <input class="visually-hidden" type="radio" name="item-size" value="medium">
           M
         </label>
         <label class="fill-cart__option">
-          <input type="radio" name="item-size" value="large">
+          <input class="visually-hidden" type="radio" name="item-size" value="large">
           L
         </label>
-        <button class="button" type="submit">Добавить</button>
+        <button class="fill-cart__button button" type="submit">Добавить</button>
       </form>
     </section>
   </body>
