@@ -9,10 +9,10 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
-      </a>
       <nav class="main-nav">
+        <a class="main-nav__logo">
+          <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
+        </a>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
@@ -27,13 +27,13 @@
             <a class="main-nav__link" href="#">Распродажа</a>
           </li>
         </ul>
+        <div class="main-nav__search">
+          <a class="main-nav__link" href="#">Поиск по сайту</a>
+        </div>
+        <div class="main-nav__cart">
+          <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
+        </div>
       </nav>
-      <div class="main-nav__search">
-        <a class="main-nav__link" href="#">Поиск по сайту</a>
-      </div>
-      <div class="main-nav__cart">
-        <a class="main-nav__link" href="#">Корзина: пока пуста</a>
-      </div>
       <span class="page-header__delivery">Бесплатная доставка по России</span>
     </header>
     <main class="page-main">
@@ -53,6 +53,7 @@
           <h2 class="best-selling__title">Товар недели</h2>
           <h3 class="best-selling__item">Вязаные корзинки</h3>
         </header>
+        <div class="best-selling__wrapper">
         <p class="best-selling__description">
           Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
         </p>
@@ -73,16 +74,17 @@
         <img class="best-selling__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Три вязаные корзинки разных размеров и цветов">
         <p class="best-selling__price">Цена: 990 руб.</p>
         <a class="best-selling__button button" href="#">Заказать</a>
+        </div>
       </article>
       <section class="features">
         <h2 class="features__title">Коротко о нас:</h2>
         <ul class="features__list">
-          <li class="features__item">Экологически чистые материалы</li>
-          <li class="features__item">Скандинавский стиль по российской цене</li>
-          <li class="features__item">Увеличивает лайки на фотографиях</li>
-          <li class="features__item">Связано вручную с любовью и умилением</li>
-          <li class="features__item">Поддержка отечественного производителя</li>
-          <li class="features__item">Поставляется в подарочной упаковке</li>
+          <li class="features__item features__item--eco">Экологически чистые материалы</li>
+          <li class="features__item features__item--hugge">Скандинавский стиль по российской цене</li>
+          <li class="features__item features__item--likes">Увеличивает лайки на фотографиях</li>
+          <li class="features__item features__item--craft">Связано вручную с любовью и умилением</li>
+          <li class="features__item features__item--local">Поддержка отечественного производителя</li>
+          <li class="features__item features__item--gift">Поставляется в подарочной упаковке</li>
         </ul>
       </section>
       <section class="reviews">
@@ -108,16 +110,16 @@
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
-        <address>
-          <table>
+        <address class="contacts__address">
+          <table class="contacts__table">
             <tr class="contacts__row">
               <th class="contacts__way">e-mail:</th>
-              <td class="contacts__value">info@mimimishkashop.ru</td>
+              <td class="contacts__value"><a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
             </tr>
             <tr class="contacts__row">
               <th class="contacts__way">адрес:</th>
-              <td class="contacts__value">г. Санкт-Петербург,
-                ул. Большая Конюшенная,
+              <td class="contacts__value">г. Санкт-Петербург,<br>
+                ул. Большая Конюшенная,<br>
               д. 19/8, офис 101</td>
             </tr>
           </table>
@@ -129,40 +131,44 @@
       </section>
     </main>
     <footer class="page-footer">
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--instagram" href="#">Мы в Инстаграме</a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--fb" href="#">Мы в Фейсбуке</a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--twitter" href="#">Мы в Твиттере</a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__image" src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy">
-        </a>
+      <div class="page-footer__wrapper">
+        <img class="page-footer__logo" src="img/logo-footer.svg" width="102" height="34" alt="Логотип магазина «Мишка»">
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--instagram" href="#">Мы в Инстаграме</a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--fb" href="#">Мы в Фейсбуке</a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--twitter" href="#">Мы в Твиттере</a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="copyright__image" src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy">
+          </a>
+        </div>
       </div>
     </footer>
     <section class="fill-cart modal">
       <h3 class="fill-cart__title">Добавить в корзину</h3>
       <form class="fill-cart__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="fill-cart__call">Выберите размер:</p>
         <label class="fill-cart__option">
-          <input type="radio" name="item-size" value="small" checked>
+          <input class="visually-hidden" type="radio" name="item-size" value="small" checked>
           S
         </label>
         <label class="fill-cart__option">
-          <input type="radio" name="item-size" value="medium">
+          <input class="visually-hidden" type="radio" name="item-size" value="medium">
           M
         </label>
         <label class="fill-cart__option">
-          <input type="radio" name="item-size" value="large">
+          <input class="visually-hidden" type="radio" name="item-size" value="large">
           L
         </label>
-        <button class="button" type="submit">Добавить</button>
+        <button class="fill-cart__button button" type="submit">Добавить</button>
       </form>
     </section>
   </body>

@@ -1,6 +1,7 @@
 .order-list {
-  width: 260px;
-  margin: 0 auto;
+  // width: 260px;
+  // margin: 0 auto;
+  .mobile-centre;
 }
 
 .order-list__description {
@@ -9,4 +10,29 @@
   margin-top: 30px;
 
   font-size: 13px;
+}
+
+@media (min-width: @tablet-width) {
+  .order-list {
+    .tablet-centre;
+  }
+
+  .order-list__description {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-list {
+    .desktop-centre;
+  }
+
+  .order-list__description {
+    width: 675px;
+
+    margin: 0 auto;
+    margin-top: 112px;
+    margin-bottom: 60px;
+  }
 }
