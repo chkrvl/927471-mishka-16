@@ -5,6 +5,15 @@
   position: relative;
 }
 
+.main-nav__toggle {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  background-color: inherit;
+}
+
 .main-nav__logo {
   margin: 0 auto;
   padding-top: 22px;
@@ -17,43 +26,6 @@
   &[href]:active {
     opacity: 0.3;
   }
-}
-
-.main-nav__toggle {
-  padding: 0;
-  margin: 0;
-
-  border: none;
-
-  background-color: inherit;
-}
-
-.main-nav--opened .main-nav__toggle {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-
-  width: 20px;
-  height: 20px;
-
-  cursor: pointer;
-
-  background-image: url("../img/icon-menu-close.svg");
-  background-repeat: no-repeat;
-}
-
-.main-nav--closed .main-nav__toggle {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-
-  width: 20px;
-  height: 20px;
-
-  cursor: pointer;
-
-  background-image: url("../img/icon-menu-open.svg");
-  background-repeat: no-repeat;
 }
 
 .main-nav__logo-image {
@@ -90,6 +62,14 @@
     opacity: 0.6;
   }
 
+  &:hover .main-nav__cart-image {
+    opacity: 1;
+    // Надо придумать способ, чтобы opacity от ссылки не передавалось изображению
+    path {
+      fill: #63d1bb;
+    }
+  }
+
   &:active {
     opacity: 0.3;
   }
@@ -124,6 +104,83 @@
     &:active {
       opacity: 0.3
     }
+}
+
+.main-nav__cart-image {
+  position: absolute;
+    top: 35px;
+    left: 32px;
+
+    width: 21px;
+    height: 18px;
+
+    opacity: 0.2;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      path {
+        fill: red;
+      }
+    }
+
+    &:active {
+      opacity: 0.3
+    }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--opened .main-nav__toggle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+
+  background-image: url("../img/icon-menu-close.svg");
+  background-repeat: no-repeat;
+}
+
+.main-nav--closed .main-nav__toggle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+
+  background-image: url("../img/icon-menu-open.svg");
+  background-repeat: no-repeat;
+}
+
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__search {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__cart {
+    display: none;
+  }
+
+  // .main-nav--opened .main-nav__list {
+  //   display: block;
+  // }
+
+  // .main-nav--opened .main-nav__search {
+  //   display: block;
+  // }
+
+  // .main-nav--opened .main-nav__cart {
+  //   display: block;
+  // }
 }
 
 @media (min-width: @tablet-width) {
