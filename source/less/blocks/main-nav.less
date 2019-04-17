@@ -87,76 +87,77 @@
 }
 
 .main-nav__search-image {
-    position: absolute;
-    top: 30px;
-    left: 32px;
+  position: absolute;
+  top: 30px;
+  left: 32px;
 
-    width: 18px;
-    height: 18px;
+  width: 18px;
+  height: 18px;
 
-    opacity: 0.2;
-    cursor: pointer;
+  opacity: 0.2;
+  cursor: pointer;
 
-    &:hover {
-      opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 
-    &:active {
-      opacity: 0.3
-    }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__cart-image {
   position: absolute;
-    top: 30px;
-    left: 30px;
+  top: 30px;
+  left: 30px;
 
-    width: 21px;
-    height: 18px;
+  width: 21px;
+  height: 18px;
 
-    opacity: 0.2;
-    cursor: pointer;
+  opacity: 0.2;
+  cursor: pointer;
 
-    &:hover {
-      opacity: 1;
-      path {
-        fill: red;
-      }
+  &:hover {
+    opacity: 1;
+
+    path {
+      fill: red;
     }
+  }
 
-    &:active {
-      opacity: 0.3
-    }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: @mobile-width-only) {
   .main-nav--opened .main-nav__toggle {
-  position: absolute;
-  top: 32px;
-  right: 30px;
+    position: absolute;
+    top: 32px;
+    right: 30px;
 
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  background-image: url("../img/icon-menu-close.svg");
-  background-repeat: no-repeat;
-}
+    background-image: url("../img/icon-menu-close.svg");
+    background-repeat: no-repeat;
+  }
 
-.main-nav--closed .main-nav__toggle {
-  position: absolute;
-  top: 32px;
-  right: 30px;
+  .main-nav--closed .main-nav__toggle {
+    position: absolute;
+    top: 32px;
+    right: 30px;
 
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  background-image: url("../img/icon-menu-open.svg");
-  background-repeat: no-repeat;
-}
+    background-image: url("../img/icon-menu-open.svg");
+    background-repeat: no-repeat;
+  }
 
   .main-nav--closed .main-nav__list {
     display: none;
@@ -266,6 +267,7 @@
   .main-nav__search .main-nav__link {
     &:hover {
       opacity: 1;
+
       path {
         fill: #63d1bb;
       }
