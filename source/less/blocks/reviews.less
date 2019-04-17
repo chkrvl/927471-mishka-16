@@ -5,8 +5,8 @@
 
 .reviews__title {
   margin: 0;
-  padding-top: 30px;
-  padding-bottom: 35px;
+  padding-top: 33px;
+  padding-bottom: 30px;
 
   line-height: 20px;
   font-weight: bold;
@@ -15,13 +15,13 @@
 
 .reviews__item {
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   padding: 0;
 }
 
 .reviews__text {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 27px;
   padding: 0;
 
   font-size: 15px;
@@ -58,13 +58,53 @@
   background-color: #ffffff;
 
   font-family: "OpenSans", sans-serif;
-  font-size: 18px;
+  font-size: 0;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.11;
   text-align: center;
 
   border: 1px solid #ececec;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.reviews__prev {
+  &::before {
+    content: "";
+
+    display: block;
+    width: 50px;
+    height: 26px;
+
+    padding: 13px 40px 13px 38px;
+
+    background-image: url("../img/icon-left-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.reviews__next {
+  &::before {
+    content: "";
+
+    display: block;
+    width: 50px;
+    height: 26px;
+
+    padding: 13px 40px 13px 38px;
+
+    background-image: url("../img/icon-right-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
 }
 
 .reviews__new {
