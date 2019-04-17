@@ -26,21 +26,29 @@
   background-repeat: no-repeat;
 
   &--instagram {
+    height: 21px;
+
     background-image: url("../img/icon-insta.svg");
   }
 
   &--fb {
+    width: 15px;
+
     background-image: url("../img/icon-fb.svg");
   }
 
   &--twitter {
+    height: 20px;
+
     background-image: url("../img/icon-twitter.svg");
   }
 }
 
 @media (min-width: @tablet-width) {
   .social-list {
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: flex-end;
+
     margin: 0;
 
     border: none;

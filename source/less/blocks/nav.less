@@ -117,7 +117,33 @@
 
   .nav__item {
     flex-grow: 1;
+
+    min-width: 334px;
+
+    &--seafoam-blue {
+      &::after {
+        top: 30px;
+      }
+    }
+
+    &--aqua-marine {
+      &::after {
+        top: 32px;
+        right: 34px;
+      }
+    }
   }
+
+  .nav__link {
+    padding-top: 28px;
+    padding-left: 35px;
+    padding-bottom: 33px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+
 }
 
 @media (min-width: @desktop-width) {
