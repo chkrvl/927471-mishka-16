@@ -28,7 +28,7 @@
 
 .catalog__item-title {
   margin: 0;
-  padding-top: 25px;
+  padding-top: 20px;
   padding-left: 28px;
 
   text-align: left;
@@ -41,7 +41,8 @@
   width: 204px;
 
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 20px;
+  padding-top: 5px;
 
   text-align: left;
   font-size: 13px;
@@ -51,8 +52,8 @@
 .catalog__item-price {
   width: 204px;
   margin: 0 auto;
-  padding-bottom: 30px;
-  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-top: 20px;
 
   font-size: 15px;
   font-weight: bold;
@@ -64,7 +65,7 @@
 .catalog__item-add {
   position: absolute;
   right: 27px;
-  bottom: 25px;
+  bottom: 22px;
 
   width: 20px;
   height: 20px;
@@ -86,7 +87,7 @@
   }
 
   .catalog__item {
-    height: 334px;
+    height: 331px;
 
     display: flex;
 
@@ -100,8 +101,8 @@
     flex-direction: column;
     justify-content: space-between;
 
-    padding-left: 30px;
-    padding-top: 30px;
+    padding-left: 27px;
+    padding-top: 25px;
   }
 
 
@@ -128,6 +129,7 @@
 
     padding: 0;
     margin: 0;
+    margin-top: 5px;
     margin-bottom: auto;
 
     font-size: 15px;
@@ -137,19 +139,24 @@
     width: 268px;
 
     padding: 0;
-    padding-top: 27px;
+    padding-top: 23px;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     font-size: 17px;
 
     border-top: 1px solid #ececec;
   }
+
+  .catalog__item-add {
+    right: 32px;
+    bottom: 20px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .catalog {
-    margin-top: 110px;
+    margin-top: 136px;
   }
 
   .catalog__list {
@@ -166,6 +173,7 @@
     min-height: 654px;
 
     margin-right: 48px;
+    margin-bottom: 60px;
 
     &:nth-child(3n+3) {
       margin-right: 0;
@@ -200,17 +208,20 @@
   }
 
   .catalog__item-desription {
-    width: auto;
+    width: 316px;
+    box-sizing: border-box;
 
     flex-grow: 1;
 
     padding: 0;
     margin: 0;
-    padding-left: 29px;
-    padding-top: 29px;
+    padding-left: 27px;
+    padding-top: 25px;
   }
 
   .catalog__item-price {
     margin-top: auto;
+    padding-top: 23px;
+    margin-bottom: 23px;
   }
 }

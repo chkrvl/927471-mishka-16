@@ -5,7 +5,7 @@
 
 .features__title {
   margin: 0;
-  padding-top: 35px;
+  padding-top: 28px;
   padding-bottom: 30px;
 
   font-size: 25px;
@@ -24,22 +24,76 @@
 .features__item {
   display: block;
 
-  margin-bottom: 30px;
+  position: relative;
+
+  margin-bottom: 28px;
   padding-top: 55px;
 
   line-height: 20px;
   font-weight: bold;
   color: #000000;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 1px;
+    left: 8px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--eco::before {
+    width: 32px;
+    height: 37px;
+
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+
+  &--hugge::before {
+    width: 47px;
+    height: 27px;
+
+    background-image: url("../img/icon-feature-money.svg");
+  }
+
+  &--likes::before {
+    width: 34px;
+    height: 27px;
+
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+
+  &--craft::before {
+    width: 35px;
+    height: 34px;
+
+    background-image: url("../img/icon-feature-ball.svg");
+  }
+
+  &--local::before {
+    width: 55px;
+    height: 23px;
+
+    background-image: url("../img/icon-feature-rocket.svg");
+  }
+
+  &--gift::before {
+    width: 33px;
+    height: 32px;
+
+    background-image: url("../img/icon-feature-gift.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {
   .features {
-    // width: 668px;
     .tablet-centre;
   }
 
   .features__title {
-    padding-top: 60px;
+    padding-top: 50px;
+    padding-bottom: 46px;
 
     font-size: 43px;
     line-height: 50px;
@@ -57,9 +111,10 @@
     width: 295px;
 
     padding: 0;
-    padding-top: 75px;
-    padding-bottom: 30px;
+    padding-top: 55px;
+    padding-bottom: 56px;
     margin: 0;
+    margin-right: 38px;
 
     font-size: 20px;
     line-height: 22px;
@@ -96,8 +151,8 @@
   }
 
   .features__title {
-    margin-left: 175px;
-    padding-top: 70px;
+    margin-left: 170px;
+    padding-top: 61px;
 
     font-size: 53px;
     line-height: 57px;
@@ -107,5 +162,9 @@
     justify-content: flex-start;
 
     margin-left: 175px;
+  }
+
+  .features__item {
+    margin-right: 55px;
   }
 }

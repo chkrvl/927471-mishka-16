@@ -9,27 +9,103 @@
 .nav__item {
   display: block;
 
+  position: relative;
+
   &--seafoam-blue {
     background-color: #63d1bb;
+    // background-image: url("../img/icon-interior.svg");
+    // background-repeat: no-repeat;
+    // background-position: right 36px center;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 23px;
+      right: 37px;
+
+      background-image: url("../img/icon-interior.svg");
+      opacity: 0.5;
+
+      width: 40px;
+      height: 62px;
+    }
+
+    &:hover::after {
+      opacity: 0.7;
+      transform: translateY(-5px);
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
   }
 
   &--aqua-marine {
     background-color: #56c3b2;
+    // background-image: url("../img/icon-toy.svg");
+    // background-repeat: no-repeat;
+    // background-position: right 36px center;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 21px;
+      right: 27px;
+
+      background-image: url("../img/icon-toy.svg");
+      opacity: 0.5;
+
+      width: 60px;
+      height: 60px;
+    }
+
+    &:hover::after {
+      opacity: 0.7;
+      transform: translateY(-5px);
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
   }
 }
 
 .nav__link {
   display: block;
 
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 29px;
+  padding-bottom: 30px;
 
   text-decoration: none;
   font-size: 19px;
   line-height: 24px;
   font-weight: bold;
   color: #ffffff;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--seafoam-blue:hover {
+    background-color: #59d5bc;
+
+    transform: scaleY(1.04) translateY(-5px);
+    // transform: translateY(-5px);
+  }
+
+  &--aqua-marine:hover {
+    background-color: #46c1ae;
+
+    transform: scaleY(1.04) translateY(-5px);
+    // transform: translateY(-5px);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -41,6 +117,30 @@
 
   .nav__item {
     flex-grow: 1;
+
+    min-width: 334px;
+
+    &--seafoam-blue {
+      &::after {
+        top: 30px;
+      }
+    }
+
+    &--aqua-marine {
+      &::after {
+        top: 32px;
+        right: 34px;
+      }
+    }
+  }
+
+  .nav__link {
+    padding-top: 28px;
+    padding-left: 35px;
+    padding-bottom: 33px;
+
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 

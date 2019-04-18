@@ -1,6 +1,13 @@
 .best-selling {
-  // width: 260px;
-  // margin: 0 auto;
+  padding-bottom: 41px;
+
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 100% 7px;
+}
+
+.best-selling__wrapper {
   .mobile-centre;
 }
 
@@ -24,7 +31,7 @@
 
 .best-selling__item {
   margin: 0;
-  padding-top: 34px;
+  padding-top: 27px;
 
   font-size: 25px;
   line-height: 30px;
@@ -34,14 +41,14 @@
 
 .best-selling__description {
   margin: 0;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 18px;
 
   letter-spacing: -1px;
 }
 
 .best-selling__stats {
-  height: 110px;
+  height: 116px;
   width: 260px;
 
   font-size: 15px;
@@ -55,7 +62,7 @@
 }
 
 .best-selling__value {
-  padding-left: 30px;
+  padding-left: 17px;
 
   border-bottom: 1px solid #ececec;
 }
@@ -64,39 +71,37 @@
   width: 260px;
   height: 315px;
 
-  margin-top: 28px;
+  margin-top: 30px;
 }
 
 .best-selling__price {
-  margin-top: 28px;
-  margin-bottom: 28px;
+  margin-top: 20px;
+  margin-bottom: 24px;
 
   text-align: center;
   font-weight: bold;
 }
 
 .best-selling__button {
-  margin-top: 28px;
-  margin-bottom: 36px;
+  margin-top: 24px;
 }
 
 @media (min-width: @tablet-width) {
   .best-selling {
-    display: flex;
-    flex-direction: column;
-    // flex-wrap: wrap;
+    padding-bottom: 70px;
 
-    // width: 668px;
-    .tablet-centre;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 100% 15px;
   }
 
   .best-selling__header {
     flex-direction: row;
     align-items: center;
-    // flex-grow: 1;
 
-    margin-top: 43px;
-    margin-bottom: 55px;
+    margin-top: 45px;
+    margin-bottom: 40px;
   }
 
   .best-selling__title {
@@ -104,6 +109,7 @@
 
     padding: 0;
     margin: 0;
+    margin-right: 28px;
 
     line-height: 17px;
     text-align: center;
@@ -119,29 +125,42 @@
   }
 
   .best-selling__wrapper {
+    .tablet-centre;
+
     position: relative;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    min-height: 404px;
+    min-height: 554px;
   }
 
   .best-selling__description {
-    width: 292px;
+    width: 282px;
 
     padding: 0;
     margin: 0;
-    margin-bottom: 54px;
+    margin-bottom: 25px;
 
     line-height: 30px;
+    letter-spacing: normal;
+  }
+
+  .best-selling__stats {
+    width: 291px;
+  }
+
+  .best-selling__value {
+    padding-left: 0;
   }
 
   .best-selling__price {
-    width: 292px;
+    width: 291px;
 
-    font-size: 24px;
+    margin-top: 50px;
+
+    font-size: 20px;
   }
 
   .best-selling__button {
@@ -153,6 +172,7 @@
   .best-selling__image {
     position: absolute;
     right: 0;
+    bottom: 0;
 
     width: 333px;
     height: 404px;
@@ -163,25 +183,22 @@
 
 @media (min-width: @desktop-width) {
   .best-selling {
-    .desktop-centre;
+    margin-top: 69px;
+    padding-bottom: 95px;
 
-    position: relative;
-
-    min-height: 636px;
-
-    margin-top: 55px;
-    margin-bottom: 73px;
+    background-size: 100% 23px;
   }
 
   .best-selling__header {
-    margin-top: 60px;
+    margin-top: 53px;
+    margin-bottom: 48px;
   }
 
   .best-selling__title {
     order: 0;
 
     margin-left: 47px;
-    margin-right: 58px;
+    margin-right: 54px;
   }
 
   .best-selling__item {
@@ -190,17 +207,20 @@
   }
 
   .best-selling__wrapper {
-    position: static;
+    .desktop-centre;
 
     justify-content: flex-start;
 
-    min-height: 465px;
-
-    margin-left: 175px;
+    min-height: 636px;
   }
 
   .best-selling__description {
-    margin-bottom: 65px;
+    margin-bottom: 50px;
+    margin-left: 175px;
+  }
+
+  .best-selling__stats {
+    margin-left: 175px;
   }
 
   .best-selling__image {
@@ -213,10 +233,15 @@
 
   .best-selling__price {
     margin: 0;
-    margin-top: auto;
+    margin-left: 175px;
+    // margin-top: auto;
+    // IE не передает min-height от флекс-контейнера его флекс-элементам
+    // https://github.com/philipwalton/flexbugs#flexbug-3
+    margin-top: 112px;
   }
 
   .best-selling__button {
     margin-top: 34px;
+    margin-left: 175px;
   }
 }

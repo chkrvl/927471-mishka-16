@@ -1,5 +1,7 @@
 .fill-cart {
   width: 320px;
+  box-sizing: border-box;
+
   margin: 0 auto;
 
   border: 1px solid #c6c6c6;
@@ -7,15 +9,16 @@
 }
 
 .fill-cart__title {
-  width: 146px;
+  width: 148px;
 
   margin: 0 auto;
   padding: 0;
-  padding-top: 36px;
-  padding-bottom: 25px;
+  padding-top: 30px;
+  padding-bottom: 12px;
 
   font-size: 25px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 .fill-cart__form {
@@ -49,11 +52,14 @@
 
   &::before {
     content: "";
+
     position: absolute;
     top: 0;
     right: 0;
+
     width: 80px;
     height: 50px;
+
     border: 2px solid rgba(68, 68, 68, 0.1);
   }
 }
@@ -69,4 +75,43 @@
 
   background-color: #63d1bb;
   border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .fill-cart {
+    width: 566px;
+
+    text-align: center;
+  }
+
+  .fill-cart__title {
+    width: auto;
+
+    padding-bottom: 17px;
+
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .fill-cart__form {
+    width: 351px;
+  }
+
+  .fill-cart__call {
+    margin-bottom: 20px;
+
+    font-size: 17px;
+  }
+
+  .fill-cart__option {
+    width: 112px;
+
+    &::before {
+      width: 108px;
+    }
+  }
+
+  .fill-cart__button {
+    width: 100%;
+  }
 }

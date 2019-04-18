@@ -1,4 +1,6 @@
 .promo {
+  position: relative;
+
   width: 260px;
   margin: 0 auto;
   margin-bottom: 58px;
@@ -7,20 +9,38 @@
 }
 
 .promo__title {
+  // position: relative;
+  position: absolute;
+  top: 0;
+
   margin: 0;
-  margin-left: 91px;
-  margin-top: 28px;
+  margin-left: 90px;
+  margin-top: 24px;
   margin-bottom: 26px;
 
   font-size: 17px;
   font-weight: bold;
   text-align: left;
   color: #000000;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    left: -55px;
+
+    width: 32px;
+    height: 27px;
+
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .promo__text {
   margin: 0;
-  margin-top: 34px;
+  margin-top: 20px;
   margin-left: 34px;
   margin-right: 43px;
 
@@ -29,41 +49,61 @@
 
 .promo__button {
   margin: 34px;
-  margin-top: 29px;
+  margin-top: 24px;
   margin-bottom: 33px;
+}
+
+.promo__video {
+  height: 150px;
+  width: 260px;
+
+  margin-top: 96px;
+
+  background-color: red;
 }
 
 @media (min-width: @tablet-width) {
   .promo {
     .tablet-centre;
 
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
 
     margin-bottom: 63px;
   }
 
   .promo__title {
-    order: 2;
-
-    margin: 0;
-    padding: 0;
-    margin-top: 43px;
-    margin-left: 107px;
-
-    font-size: 20px;
-  }
-
-  .promo__video {
-    order: 1;
-  }
-
-  .promo__text {
-    order: 3;
+    // order: 2;
+    position: relative;
 
     margin: 0;
     padding: 0;
     margin-top: 40px;
+    margin-left: 107px;
+
+    font-size: 20px;
+
+    &::before {
+      top: -6px;
+      left: -65px;
+    }
+  }
+
+  .promo__video {
+    // order: 1;
+
+    height: 455px;
+    width: 668px;
+
+    margin-top: 0;
+  }
+
+  .promo__text {
+    // order: 3;
+
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
     padding-left: 40px;
     padding-right: 47px;
 
@@ -72,10 +112,11 @@
   }
 
   .promo__button {
-    order: 4;
+    // order: 4;
 
     margin: 42px;
-    margin-bottom: 46px;
+    margin-top: 36px;
+    margin-bottom: 45px;
   }
 }
 
@@ -83,11 +124,12 @@
   .promo {
     .desktop-centre;
 
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: stretch;
+    display: flex;
+    // flex-wrap: wrap;
+    // align-content: flex-start;
+    // align-items: stretch;
 
-    height: 455px;
+    // height: 455px;
 
     margin-bottom: 105px;
 
@@ -114,8 +156,13 @@
     width: 148px;
 
     margin: 0;
-    margin-bottom: 42px;
-    padding-top: 100px;
+    margin-bottom: 33px;
+    padding-top: 95px;
+
+    &::before {
+      top: 40px;
+      left: 0;
+    }
   }
 
   .promo__text {
@@ -127,7 +174,7 @@
 
   .promo__button {
     margin: auto 0;
-    // margin-top: 50px;
-    // margin-bottom: 60px;
+    margin-top: 46px;
+    margin-bottom: 60px;
   }
 }
