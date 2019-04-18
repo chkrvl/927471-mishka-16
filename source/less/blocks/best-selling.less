@@ -84,13 +84,10 @@
 
 .best-selling__button {
   margin-top: 24px;
-  // margin-bottom: 36px;
 }
 
 @media (min-width: @tablet-width) {
   .best-selling {
-    // display: flex;
-    // flex-direction: column;
     padding-bottom: 70px;
 
     background-image: url("../img/bg-zigzag-line.svg");
@@ -102,7 +99,6 @@
   .best-selling__header {
     flex-direction: row;
     align-items: center;
-    // flex-grow: 1;
 
     margin-top: 45px;
     margin-bottom: 40px;
@@ -187,14 +183,7 @@
 
 @media (min-width: @desktop-width) {
   .best-selling {
-    // .desktop-centre;
-
-    // position: relative;
-
-    // min-height: 636px;
-
     margin-top: 69px;
-    // margin-bottom: 73px;
     padding-bottom: 95px;
 
     background-size: 100% 23px;
@@ -218,15 +207,11 @@
   }
 
   .best-selling__wrapper {
-    // position: static;
     .desktop-centre;
 
     justify-content: flex-start;
 
-    // min-height: 465px;
     min-height: 636px;
-
-    // margin-left: 175px;
   }
 
   .best-selling__description {
@@ -249,7 +234,10 @@
   .best-selling__price {
     margin: 0;
     margin-left: 175px;
-    margin-top: auto;
+    // margin-top: auto;
+    // IE не передает min-height от флекс-контейнера его флекс-элементам
+    // https://github.com/philipwalton/flexbugs#flexbug-3
+    margin-top: 112px;
   }
 
   .best-selling__button {
