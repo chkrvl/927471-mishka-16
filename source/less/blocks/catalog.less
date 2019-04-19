@@ -70,11 +70,25 @@
   width: 20px;
   height: 20px;
 
-  background-image: url("../img/icon-cart.svg");
-  background-repeat: no-repeat;
+  // background-image: url("../img/icon-cart.svg");
+  // background-repeat: no-repeat;
   border: none;
 
   font-size: 0;
+
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+
+    path {
+      fill: #63d1bb;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
