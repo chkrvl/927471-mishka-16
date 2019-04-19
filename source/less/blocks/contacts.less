@@ -40,6 +40,8 @@
 }
 
 .contacts__value {
+  position: relative;
+
   padding-left: 27px;
 }
 
@@ -48,6 +50,27 @@
   line-height: 30px;
   color: #444444;
   text-decoration: none;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+
+    width: 177px;
+    height: 1px;
+
+    background-color: #46c1ae;
+  }
 }
 
 .contacts__map {
@@ -73,6 +96,7 @@
 
   .contacts__title {
     .tablet-centre;
+    width: 669px;
 
     position: relative;
 
@@ -121,6 +145,10 @@
 
   .contacts__email {
     font-size: 17px;
+
+    &::after {
+      width: 200px;
+    }
   }
 
   .contacts__map {
@@ -139,7 +167,10 @@
   .contacts__write-to-us {
     display: inline-block;
 
-    margin: 0 auto;
+    align-self: center;
+    // margin: 0 auto;
+    // Column flex items ignore margin-auto on the cross axis
+    // https://github.com/philipwalton/flexbugs#flexbug-15
     margin-top: 50px;
     margin-bottom: 55px;
     padding: 15px 39px;
