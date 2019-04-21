@@ -1,9 +1,13 @@
 .order-form__fieldset {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 44px;
   padding: 0;
 
   border: none;
+
+  &--name {
+    margin-bottom: 20px;
+  }
 
   &--phone {
     position: relative;
@@ -96,6 +100,10 @@
     border-color: #62d1ba;
   }
 
+  &:active::before {
+    border-color: rgba(4, 4, 4, 0.3);
+  }
+
   &::after {
     content: "";
   }
@@ -124,6 +132,10 @@
   &:hover::before {
     border-color: #62d1ba;
   }
+
+  &:active::before {
+    border-color: rgba(4, 4, 4, 0.3);
+  }
 }
 
 .order-form__title--text {
@@ -132,32 +144,6 @@
 
   &:last-of-type {
     margin-bottom: 10px;
-  }
-}
-
-.order-form__input-text {
-  display: block;
-
-  width: 100%;
-  min-height: 52px;
-
-  margin: 0;
-  padding: 0;
-  border: 0;
-
-  border-bottom: 2px solid #000000;
-
-  &:placeholder-shown {
-    font-family: "OpenSans", sans-serif;
-    font-size: 17px;
-    line-height: 18px;
-    color: rgba(68, 68, 68, 0.3);
-  }
-
-  &--phone {
-    &:placeholder-shown {
-    font-size: 19px;
-    }
   }
 }
 
@@ -179,6 +165,49 @@
   }
 }
 
+.order-form__input-text {
+  display: block;
+
+  width: 100%;
+  min-height: 53px;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  border-bottom: 2px solid #000000;
+
+  font-family: "OpenSans", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #444444;
+
+  &:placeholder-shown {
+    font-family: "OpenSans", sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:hover {
+    border-color: #62d1ba;
+
+    & + .order-form__icon {
+      path {
+        fill: #62d1ba;
+      }
+
+      opacity: 1;
+    }
+  }
+
+  &--phone {
+    &:placeholder-shown {
+    font-size: 19px;
+    }
+  }
+}
+
 .order-form__input-textarea {
   display: block;
 
@@ -192,11 +221,20 @@
 
   border: 2px solid #444444;
 
+  font-family: "OpenSans", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #444444;
+
   &:placeholder-shown {
     font-family: "OpenSans", sans-serif;
     font-size: 17px;
     line-height: 18px;
     color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:hover {
+    border-color: #62d1ba;
   }
 }
 
@@ -213,4 +251,293 @@
   width: 100%;
 
   margin-bottom: 55px;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form {
+    position: relative;
+
+    padding-top: 3px;
+  }
+
+  .order-form__fieldset {
+    // display: flex;
+    // flex-wrap: wrap;
+
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 66px;
+
+    &--color {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      box-sizing: border-box;
+      min-height: 304px;
+
+      padding-left: 297px;
+
+      background-color: #f1f1f1;
+    }
+
+    &--name {
+      display: flex;
+      flex-direction: column;
+
+      position: relative;
+
+      padding-top: 48px;
+      margin-bottom: 32px;
+    }
+
+    &--phone {
+      display: flex;
+
+      padding-top: 47px;
+
+      background-color: #f1f1f1;
+    }
+
+    &--email {
+      display: flex;
+
+      padding-top: 11px;
+      padding-bottom: 50px;
+
+      background-color: #f1f1f1;
+    }
+
+    &--textarea {
+      display: flex;
+
+      position: relative;
+
+      padding-top: 50px;
+    }
+  }
+
+  .order-form__section {
+    position: absolute;
+
+    margin: 0;
+    left: 52px;
+
+    &--name {
+      top: 68px;
+    }
+
+    &--phone {
+      top: 68px;
+    }
+
+    &--email {
+      top: 32px;
+    }
+
+    &--textarea {
+      top: 68px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .order-form__title {
+    margin-left: 298px;
+
+    font-size: 19px;
+  }
+
+  .order-form__title--radio {
+    margin-bottom: 57px;
+
+    &::before {
+      left: -82px;
+      top: -16px;
+
+      width: 49px;
+      height: 48px;
+    }
+  }
+
+  .order-form__title--checkbox {
+    // margin-left: 297px;
+    margin-left: 0px;
+    min-width: 210px;
+
+    &::before {
+      left: -80px;
+      top: -15px;
+
+      width: 50px;
+      height: 48px;
+    }
+  }
+
+  .order-form__title--text {
+    display: flex;
+    align-items: center;
+
+    // width: 501px;
+
+    margin-left: 217px;
+    margin-right: 50px;
+  }
+
+  .order-form__input-text {
+    // width: 428px;
+
+    margin-left: 25px;
+    padding-left: 15px;
+
+    &:placeholder-shown {
+      font-size: 19px;
+    }
+
+    &--phone {
+      // width: auto;
+
+      margin-left: 217px;
+      margin-right: 50px;
+
+      background-color: #f1f1f1;
+    }
+
+    &--email {
+      margin-left: 217px;
+      margin-right: 50px;
+
+      background-color: #f1f1f1;
+    }
+  }
+
+  .order-form__icon {
+
+    &--phone {
+      right: 76px;
+      top: 60px;
+    }
+
+    &--email {
+      right: 72px;
+      top: 25px;
+    }
+  }
+
+  .order-form__input-textarea {
+    margin-left: 217px;
+    margin-right: 50px;
+
+    &:placeholder-shown {
+      font-size: 19px;
+    }
+  }
+
+  .order-form__footnote {
+    position: absolute;
+    bottom: 13px;
+    right: 50px;
+
+    margin: 0;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order-form__button {
+    width: auto;
+
+    margin-top: 43px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form {
+    padding-top: 0;
+  }
+
+  .order-form__section {
+    left: 113px;
+  }
+
+  .order-form__fieldset {
+    padding-bottom: 12px;
+
+    &--color {
+      justify-content: flex-start;
+
+      min-height: 228px;
+
+      padding-left: 305px;
+    }
+
+    &--name {
+      padding-bottom: 10px;
+    }
+
+    &--email {
+      padding-bottom: 47px;
+    }
+  }
+
+  .order-form__title--checkbox {
+    min-width: 262px;
+  }
+
+  .order-form__title {
+    margin-left: 305px;
+
+    &--checkbox {
+      margin-left: 0;
+    }
+
+    &--text {
+      margin-left: 225px;
+      margin-right: 225px;
+    }
+  }
+
+  .order-form__input-text {
+    &--phone {
+      margin-left: 226px;
+      margin-right: 226px;
+    }
+
+    &--email {
+      margin-left: 226px;
+      margin-right: 226px;
+    }
+
+    &area {
+      margin-left: 226px;
+      margin-right: 226px;
+    }
+  }
+
+  .order-form__icon {
+
+    &--phone {
+      right: 233px;
+    }
+
+    &--email {
+      right: 229px;
+    }
+  }
+
+  .order-form__footnote {
+    bottom: 12px;
+    right: 223px;
+  }
+
+  .order-form__button {
+    margin-top: 37px;
+    margin-left: 225px;
+  }
 }
