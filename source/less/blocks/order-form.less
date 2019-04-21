@@ -105,8 +105,24 @@
   }
 
   &::after {
+    display: none;
     content: "";
+
+    position: absolute;
+    left: -50px;
+    top: 2px;
+
+    width: 14px;
+    height: 14px;
+
+    background-color: #62d1ba;
+    border: 1px solid #62d1ba;
+    border-radius: 50%;
   }
+}
+
+.order-form__input-radio:checked + .order-form__title--radio::after {
+    display:  block;
 }
 
 .order-form__title--checkbox {
@@ -136,6 +152,26 @@
   &:active::before {
     border-color: rgba(4, 4, 4, 0.3);
   }
+
+  &::after {
+    display: none;
+    content: "";
+
+    position: absolute;
+    left: -55px;
+    top: -0px;
+
+    width: 24px;
+    height: 18px;
+
+    background-image: url("../img/icon-tick.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.order-form__input-checkbox:checked + .order-form__title--checkbox::after {
+  display: block;
 }
 
 .order-form__title--text {
@@ -356,6 +392,14 @@
       width: 49px;
       height: 48px;
     }
+
+    &::after {
+      left: -66px;
+      top: -1px;
+
+      width: 20px;
+      height: 20px;
+    }
   }
 
   .order-form__title--checkbox {
@@ -368,6 +412,14 @@
 
       width: 50px;
       height: 48px;
+    }
+
+    &::after {
+      left: -68px;
+      top: 0px;
+
+      width: 33px;
+      height: 22px;
     }
   }
 

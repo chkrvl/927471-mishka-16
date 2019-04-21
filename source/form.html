@@ -72,14 +72,10 @@
         <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="order-form__fieldset order-form__fieldset--type">
             <p class="order-form__section">Тип</p>
-            <label class="order-form__title order-form__title--radio">
-              <input class="order-form__input-radio visually-hidden" type="radio" name="item-type" value="accessory" checked>
-              Аксессуар для интерьера
-            </label>
-            <label class="order-form__title order-form__title--radio">
-              <input class="order-form__input-radio visually-hidden" type="radio" name="item-type" value="toy">
-              Детская игрушка
-            </label>
+            <input class="order-form__input-radio visually-hidden" type="radio" name="item-type" value="accessory" id="item-type-accessory" checked>
+            <label class="order-form__title order-form__title--radio" for="item-type-accessory">Аксессуар для интерьера</label>
+            <input class="order-form__input-radio visually-hidden" type="radio" name="item-type" value="toy" id="item-type-toy">
+            <label class="order-form__title order-form__title--radio" for="item-type-toy">Детская игрушка</label>
           </div>
           <div class="order-form__fieldset order-form__fieldset--color">
             <p class="order-form__section">Цвет</p>
