@@ -62,6 +62,22 @@
 
     border: 2px solid rgba(68, 68, 68, 0.1);
   }
+
+  &:hover::before {
+    border-color: rgba(4, 4, 4, 0.3);
+  }
+
+  &:active::before {
+    border-color: #62d1ba;
+  }
+}
+
+.fill-cart__input {
+  &:checked + .fill-cart__option {
+    &::before {
+      border-color: #62d1ba;
+    }
+  }
 }
 
 .fill-cart__button {
