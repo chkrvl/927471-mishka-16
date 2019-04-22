@@ -1,12 +1,10 @@
 .order-list {
-  // width: 260px;
-  // margin: 0 auto;
   .mobile-centre;
 }
 
 .order-list__description {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   margin-top: 22px;
 
   font-size: 13px;
@@ -14,12 +12,14 @@
 
 @media (min-width: @tablet-width) {
   .order-list {
-    .tablet-centre;
+    width: 100%;
   }
 
   .order-list__description {
+    .tablet-centre;
+
     margin-top: 57px;
-    margin-bottom: 70px;
+    margin-bottom: 5px;
 
     font-size: 17px;
     line-height: 30px;
@@ -28,14 +28,15 @@
 
 @media (min-width: @desktop-width) {
   .order-list {
-    .desktop-centre;
+    // .desktop-centre;
   }
 
   .order-list__description {
     width: 675px;
 
     margin: 0 auto;
-    margin-top: 112px;
-    margin-bottom: 60px;
+    margin-top: 130px;
+    margin-bottom: 5px;
+    margin-left: 224px;
   }
 }
