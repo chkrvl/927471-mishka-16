@@ -1,4 +1,7 @@
 .fill-cart {
+  top: 24vh;
+  left: 7vw;
+
   width: 320px;
   box-sizing: border-box;
 
@@ -6,6 +9,7 @@
 
   border: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  background-color: #ffffff;
 }
 
 .fill-cart__title {
@@ -97,6 +101,8 @@
 
 @media (min-width: @tablet-width) {
   .fill-cart {
+    left: 13vw;
+
     width: 566px;
 
     text-align: center;
@@ -131,5 +137,11 @@
 
   .fill-cart__button {
     width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fill-cart {
+    left: 25vw;
   }
 }

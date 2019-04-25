@@ -292,5 +292,27 @@
         <button class="fill-cart__button button" type="submit">Добавить</button>
       </form>
     </section>
+    <div class="overlay"></div>
+    <script>
+      var button = document.querySelector(".best-selling__button");
+      var popup = document.querySelector(".modal");
+      var overlay = document.querySelector(".overlay")
+
+      button.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+        overlay.classList.add("overlay-show");
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (popup.classList.contains("modal-show")) {
+            popup.classList.remove("modal-show");
+            overlay.classList.remove("overlay-show");
+          }
+        }
+      });
+    </script>
   </body>
 </html>
