@@ -218,17 +218,7 @@
               д. 19/8, офис 101</td>
             </tr>
           </table>
-          <div class="contacts__map" id="contacts-map">
-            <!-- <picture>
-              <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
-
-              <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-              <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="Магазин «Мишка» на карте Санкт-Петербурга">
-            </picture> -->
-          </div>
+          <div class="contacts__map" id="contacts-map"></div>
         </address>
         <a class="contacts__write-to-us button" href="#">Напишите нам</a>
       </section>
@@ -343,8 +333,8 @@
         myPlacemark = new ymaps.Placemark([59.93869332, 30.32309417], {}, {
           iconLayout: "default#image",
           iconImageHref: "img/icon-map-pin.svg",
-          iconImageSize: [80, 140],
-          iconImageOffset: [-37, -138]
+          iconImageSize: [67, 100],
+          iconImageOffset: [-30, -100]
         });
 
         myMap.geoObjects
