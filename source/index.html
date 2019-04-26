@@ -11,6 +11,8 @@
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.js" async></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=deb53e4f-6fa3-4790-87c0-c07939ad22be&lang=ru_RU">
+    </script>
   </head>
   <body>
     <svg style="display: none">
@@ -216,8 +218,8 @@
               д. 19/8, офис 101</td>
             </tr>
           </table>
-          <div class="contacts__map">
-            <picture>
+          <div class="contacts__map" id="contacts-map">
+            <!-- <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
@@ -225,7 +227,7 @@
               <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
               <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="Магазин «Мишка» на карте Санкт-Петербурга">
-            </picture>
+            </picture> -->
           </div>
         </address>
         <a class="contacts__write-to-us button" href="#">Напишите нам</a>
@@ -327,6 +329,31 @@
           navMain.classList.add("main-nav--closed");
           navMain.classList.remove("main-nav--opened");
         }
+      });
+
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map("contacts-map", {
+          center: [59.9388, 30.3232],
+          zoom: 17
+        }, {
+
+          searchControlProvider: "yandex#search"
+        }),
+
+        myPlacemark = new ymaps.Placemark([59.93869332, 30.32309417], {}, {
+          iconLayout: "default#image",
+          iconImageHref: "img/icon-map-pin.svg",
+          iconImageSize: [80, 140],
+          iconImageOffset: [-37, -138]
+        });
+
+        myMap.geoObjects
+        .add(myPlacemark);
+
+        myMap.controls.remove("typeSelector");
+        myMap.controls.remove("trafficControl");
+        myMap.controls.remove("searchControl");
+        myMap.controls.remove("zoomControl");
       });
     </script>
   </body>
