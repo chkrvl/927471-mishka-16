@@ -254,15 +254,17 @@
     <div class="overlay"></div>
   </body>
   <script>
-      var button = document.querySelector(".catalog__item-add");
+      var button = document.querySelectorAll(".catalog__item-add");
       var popup = document.querySelector(".modal");
-      var overlay = document.querySelector(".overlay")
+      var overlay = document.querySelector(".overlay");
 
-      button.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-        overlay.classList.add("overlay-show");
-      });
+      for (var i = 0; i < button.length; i++) {
+        button[i].addEventListener("click", function (evt) {
+          evt.preventDefault();
+          popup.classList.add("modal-show");
+          overlay.classList.add("overlay-show");
+        });
+      }
 
       overlay.addEventListener("click", function (evt) {
         evt.preventDefault();
