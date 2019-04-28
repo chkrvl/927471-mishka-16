@@ -1,6 +1,8 @@
 .fill-cart {
-  top: 24vh;
-  left: 7vw;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 
   width: 320px;
   box-sizing: border-box;
@@ -101,8 +103,6 @@
 
 @media (min-width: @tablet-width) {
   .fill-cart {
-    left: 13vw;
-
     width: 566px;
 
     text-align: center;
@@ -137,11 +137,5 @@
 
   .fill-cart__button {
     width: 100%;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .fill-cart {
-    left: 25vw;
   }
 }
