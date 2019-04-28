@@ -24,8 +24,7 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    // Почему-то не срабатывает минифицирование
-    // .pipe(csso())
+    .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
