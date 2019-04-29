@@ -19,7 +19,7 @@ var server = require("browser-sync").create();
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
-    .pipe(sourcemap.init())
+    // .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
       autoprefixer()
