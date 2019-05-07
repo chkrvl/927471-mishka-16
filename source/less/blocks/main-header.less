@@ -80,7 +80,15 @@
 
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
-      background-size: cover;
+      background-size: contain;
+    }
+
+    &--catalog::after {
+      bottom: -1px;
+    }
+
+    &--form::after {
+      bottom: -1px;
     }
   }
 
@@ -127,6 +135,14 @@
     &::after {
       // bottom: -5px;
       background-size: auto;
+    }
+
+    &--catalog::after {
+      bottom: -10px;
+    }
+
+    &--form::after {
+      bottom: -10px;
     }
   }
 

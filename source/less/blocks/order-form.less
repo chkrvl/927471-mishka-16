@@ -121,6 +121,11 @@
   }
 }
 
+.order-form__input-radio:focus + .order-form__title--radio::before {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(77, 144, 254, 0.52);
+}
+
 .order-form__input-radio:checked + .order-form__title--radio::after {
   display: block;
 }
@@ -168,6 +173,11 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+}
+
+.order-form__input-checkbox:focus + .order-form__title--checkbox::before {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(77, 144, 254, 0.52);
 }
 
 .order-form__input-checkbox:checked + .order-form__title--checkbox::after {
@@ -307,6 +317,7 @@
       min-height: 304px;
 
       padding-left: 297px;
+      padding-right: 33px;
 
       background-color: #f1f1f1;
     }
@@ -402,7 +413,7 @@
 
   .order-form__title--checkbox {
     margin-left: 0;
-    min-width: 50%;
+    min-width: 40%;
 
     &::before {
       left: -80px;
