@@ -10,6 +10,16 @@
 .reviews__centre {
   width: 260px;
   margin: 0 auto;
+
+  background-image: none;
+
+  @media (max-width: @mobile-width-only) {
+    background-image: none;
+
+    @media @retina {
+      background-image: none;
+    }
+  }
 }
 
 .reviews__title {
