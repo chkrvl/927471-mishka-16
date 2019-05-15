@@ -319,6 +319,32 @@
     padding-top: 3px;
   }
 
+  .order-form__centre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &--type {
+      display: block;
+    }
+
+    &--name {
+      flex-direction: column;
+    }
+
+    &--phone {
+      width: 100%;
+    }
+
+    &--email {
+      width: 100%;
+    }
+
+    &--textarea {
+      width: 100%;
+    }
+  }
+
   .order-form__fieldset {
     margin-bottom: 0;
     padding-bottom: 10px;
@@ -492,6 +518,8 @@
   }
 
   .order-form__input-textarea {
+    width: 100%;
+
     margin-left: 217px;
     margin-right: 50px;
 
@@ -502,7 +530,7 @@
 
   .order-form__footnote {
     position: absolute;
-    bottom: 13px;
+    bottom: 63px;
     right: 50px;
 
     margin: 0;
@@ -527,8 +555,45 @@
     padding-top: 0;
   }
 
+  .order-form__centre {
+    position: relative;
+    display: block;
+
+    width: 1150px;
+
+    box-sizing: border-box;
+
+    margin: 0 auto;
+
+    &--color {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      // box-sizing: border-box;
+
+      padding-left: 305px;
+    }
+  }
+
   .order-form__section {
     left: 113px;
+
+    &--name {
+      top: 20px;
+    }
+
+    &--phone {
+      top: 20px;
+    }
+
+    &--email {
+      top: 20px;
+    }
+
+    &--textarea {
+      top: 18px;
+    }
   }
 
   .order-form__fieldset {
@@ -539,7 +604,9 @@
 
       min-height: 228px;
 
-      padding-left: 305px;
+      // padding-left: 305px;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &--name {
@@ -555,7 +622,7 @@
     margin-left: 305px;
 
     &--checkbox {
-      min-width: 32%;
+      min-width: 31%;
 
       margin-left: 0;
     }
@@ -568,16 +635,22 @@
 
   .order-form__input-text {
     &--phone {
+      width: 685px;
+
       margin-left: 226px;
-      margin-right: 226px;
+      // margin-right: 226px;
     }
 
     &--email {
+      width: 685px;
+
       margin-left: 226px;
-      margin-right: 226px;
+      // margin-right: 226px;
     }
 
     &area {
+      width: 700px;
+
       margin-left: 226px;
       margin-right: 226px;
     }
@@ -585,11 +658,13 @@
 
   .order-form__icon {
     &--phone {
-      right: 233px;
+      right: 232px;
+      top: 14px;
     }
 
     &--email {
       right: 229px;
+      top: 10px;
     }
   }
 
