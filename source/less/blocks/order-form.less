@@ -343,6 +343,10 @@
     &--textarea {
       width: 100%;
     }
+
+    &--bottom {
+      display: block;
+    }
   }
 
   .order-form__fieldset {
@@ -457,6 +461,10 @@
     margin-left: 0;
     min-width: 40%;
 
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      min-width: 50%;
+    }
+
     &::before {
       left: -80px;
       top: -15px;
@@ -530,7 +538,7 @@
 
   .order-form__footnote {
     position: absolute;
-    bottom: 63px;
+    bottom: 12px;
     right: 50px;
 
     margin: 0;
